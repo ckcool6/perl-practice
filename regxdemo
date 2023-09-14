@@ -1,0 +1,14 @@
+#!/usr/bin/perl
+
+$str = 'Perl is a high-level, general-purpose, interpreted, dynamic programming language. Though Perl is not officially an acronym,[9] there are various backronyms in use, including "Practical Extraction and Reporting Language';
+
+#匹配第一个
+if ($str =~ /high/){
+    print "第一个匹配成功\n";
+    print "result: $& \n"; #匹配后存入`$&`变量里
+}
+
+#匹配全部需要用循环遍历，将输出两次`is`
+while ($str =~ /is/g){
+    print "result: $&\n";
+}
